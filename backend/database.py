@@ -14,4 +14,7 @@ DATABASE_URL = f'postgresql://{db_user}:{db_password}@{db_endpoint}:{db_port}/{d
 
 
 engine = sql.create_engine(DATABASE_URL)
-print(engine)
+
+sessionLocal = orm.sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+base = declarative.declarative_base()
