@@ -17,4 +17,4 @@ engine = sql.create_engine(DATABASE_URL)
 
 sessionLocal = orm.sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-base = declarative.declarative_base()
+Base = declarative.declarative_base()
