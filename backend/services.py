@@ -1,4 +1,9 @@
-import database as db
+import models
+import database
+
 
 def create_database():
-    return db.Base.metadata.create_all(bind=db.engine)
+    return database.Base.metadata.create_all(bind=database.engine)
+
+
+create_database()
